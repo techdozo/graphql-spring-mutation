@@ -1,0 +1,52 @@
+type Query {
+    books: [Book]
+    bookById(id : ID) : Book
+}
+
+type Mutation {
+    addBook(book: BookInput!): BookInfo!
+    updateBook(id: ID!, book: BookInput!): BookInfo!
+    deleteBook(id: ID!): BookInfo!
+    addRating(bookId: Int!, rating: RatingInput!): Rating
+}
+
+input RatingInput {
+    rating: Int
+    comment: String
+    user: String
+}
+
+type BookInfo {
+    id : Int
+    name : String
+    author: String
+    publisher: String
+    price: Float
+}
+
+type Output {
+    name: String
+}
+
+input BookInput {
+    name : String
+    author: String
+    publisher: String
+    price: Float
+}
+
+type Book {
+    id : ID
+    name : String
+    author: String
+    publisher: String
+    price: Float
+    ratings: [Rating]
+}
+
+type Rating {
+    id: ID
+    rating: Int
+    comment: String
+    user: String
+}
