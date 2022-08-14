@@ -1,7 +1,7 @@
 # Getting Started
 A Spring GraphQL batch example to solve N + 1 problem.
 
-Article - [Spring for GraphQL: How to solve the N+1 Problem?](https://techdozo.dev/spring-for-graphql-how-to-solve-the-n1-problem/) 
+Article - [Spring for GraphQL: Mutation](https://techdozo.dev/spring-for-graphql-mutation/) 
 
 
 ## Build
@@ -18,7 +18,7 @@ Java version : Java 17
 - `domain.repository.model` contains database representation domain model
 - `domain.repository.mapper` contains classes which maps domain object to database object
 - `application.service` package contains service classes
-- `resources\data.sql` contains insert statements to bootstrap book and rating data so Query returns some result 
+- `resources\data.sql` contains insert statements to bootstrap book and rating data so that Query returns some result without mutation 
 
 
 By default, the data.sql script executes before Hibernate initialization. 
